@@ -3,7 +3,7 @@ FROM datagovhk/centos:latest
 # Install packages
 RUN yum -y groupinstall development
 RUN yum -y install https://centos7.iuscommunity.org/ius-release.rpm
-RUN yum -y install openssh-server passwd java-1.8.0-openjdk-devel yum-utils which cronie python36u python36u-pip python36u-devel
+RUN yum -y install openssh-server passwd java-1.8.0-openjdk-devel yum-utils which cronie dos2unix python36u python36u-pip python36u-devel
 RUN yum clean all
 RUN pip3.6 install --upgrade pip
 RUN pip3.6 install boto3 requests pyyaml google-api-python-client
